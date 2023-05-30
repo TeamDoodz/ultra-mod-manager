@@ -8,6 +8,8 @@ namespace UMM.Loader
     [BepInPlugin("UMM", "umm.mainManager", VersionHandler.VERSION)]
     public class Plugin : BaseUnityPlugin
     {
+        internal const string UKModDeprecateMessage = "The UKMod system is deprecated. See <some documentation link> for more information.";
+
         private static bool initialized = false;
         internal static Plugin instance;
         internal static ManualLogSource logger;

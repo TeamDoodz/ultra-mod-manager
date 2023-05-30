@@ -1,8 +1,10 @@
 ﻿using System;
+using UMM.Loader;
 
 namespace UMM
 {
-    public class UKDependency : Attribute
+	[Obsolete(Plugin.UKModDeprecateMessage)]
+	public class UKDependency : Attribute
     {
         public string GUID { get; private set; }
         public Version MinimumVersion { get; private set; }

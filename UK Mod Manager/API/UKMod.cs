@@ -1,11 +1,13 @@
 ﻿using System;
 using System.IO;
+using UMM.Loader;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace UMM
 {
-    public abstract class UKMod : MonoBehaviour
+	[Obsolete(Plugin.UKModDeprecateMessage)]
+	public abstract class UKMod : MonoBehaviour
     {
         public UnityEvent OnModUnloaded = new UnityEvent();
         public string modFolder { get; internal set; }

@@ -9,7 +9,8 @@ using System.Collections.Generic;
 
 namespace UMM
 {
-    public class ModInformation : IComparable<ModInformation>
+	[Obsolete(Plugin.UKModDeprecateMessage)]
+	public class ModInformation : IComparable<ModInformation>
     {
         public ModType modType { get; }
         public Type mod { get; }

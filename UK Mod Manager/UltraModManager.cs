@@ -8,11 +8,14 @@ using System.Reflection;
 using UMM.HarmonyPatches;
 using UnityEngine;
 using UnityEngine.Networking;
+#pragma warning disable CS0618
 using static UMM.ModInformation;
+#pragma warning restore CS0618
 
 namespace UMM.Loader
 {
-    public static class UltraModManager
+	[Obsolete(Plugin.UKModDeprecateMessage)]
+	public static class UltraModManager
     {
         public static DirectoryInfo modsDirectory = new DirectoryInfo(Path.Combine(BepInEx.Paths.BepInExRootPath, "UMM Mods"));
         public static Dictionary<string, ModInformation> foundMods = new Dictionary<string, ModInformation>();

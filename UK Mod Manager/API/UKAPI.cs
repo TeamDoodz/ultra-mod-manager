@@ -32,15 +32,17 @@ namespace UMM
             }
         }
 
-        /// <summary>
-        /// Returns a clone of all found <see cref="ModInformation"/> instances.
-        /// </summary>
-        public static Dictionary<string, ModInformation> AllModInfoClone => UltraModManager.foundMods.ToDictionary(entry => entry.Key, entry => entry.Value);
+		/// <summary>
+		/// Returns a clone of all found <see cref="ModInformation"/> instances.
+		/// </summary>
+		[Obsolete(Plugin.UKModDeprecateMessage)]
+		public static Dictionary<string, ModInformation> AllModInfoClone => UltraModManager.foundMods.ToDictionary(entry => entry.Key, entry => entry.Value);
 
-        /// <summary>
-        /// Returns a clone of all loaded <see cref="ModInformation"/> instances.
-        /// </summary>
-        public static Dictionary<string, ModInformation> AllLoadedModInfoClone => UltraModManager.allLoadedMods.ToDictionary(entry => entry.Key, entry => entry.Value);
+		/// <summary>
+		/// Returns a clone of all loaded <see cref="ModInformation"/> instances.
+		/// </summary>
+		[Obsolete(Plugin.UKModDeprecateMessage)]
+		public static Dictionary<string, ModInformation> AllLoadedModInfoClone => UltraModManager.allLoadedMods.ToDictionary(entry => entry.Key, entry => entry.Value);
 
         /// <summary>
         /// Initializes the API by loading the save file and common asset bundle
